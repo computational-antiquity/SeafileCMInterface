@@ -1,0 +1,13 @@
+.jp-seafileInterfaceWidget {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+
+.jp-seafileInterfaceInput {
+    margin: auto;
+}
+
+.jp-seafileAttribution {
+    margin: 20px auto;
+}

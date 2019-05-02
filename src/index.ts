@@ -26,10 +26,23 @@ const extension: JupyterLabPlugin<void> = {
     widget.id = 'SeafileInterface';
     widget.title.label = 'Seafile CM Interface';
     widget.title.closable = true;
+    widget.addClass('jp-seafileInterfaceWidget');
 
     // add image
     let img = document.createElement('img');
+    img.className = 'jp-seafileInterfaceInput';
     widget.node.appendChild(img);
+
+    // attribution
+    img.insertAdjacentHTML('afterend',
+    `
+    <div class="jp-seafileAttribution">
+      <a href="https://creativecommons.org/licenses/by-nc/2.5/" class="jp-seafileAttribution" target="_blank">
+        <img src="https://licensebuttons.net/l/by-nc/2.5/80x15.png" />
+      </a>
+    </div>
+    `
+    );
 
     // fetch info
     fetch('https:////egszlpbmle.execute-api.us-east-1.amazonaws.com/prod').then(response => {
