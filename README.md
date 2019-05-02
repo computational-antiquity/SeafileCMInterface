@@ -1,6 +1,6 @@
 # SeafileContentManagerInterface
 
-An interface for the Seafile Content Manager backend. 
+An interface for the Seafile Content Manager backend.
 
 
 ## Prerequisites
@@ -29,4 +29,3 @@ To rebuild the package and the JupyterLab app:
 npm run build
 jupyter lab build
 ```
-
