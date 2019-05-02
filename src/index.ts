@@ -27,6 +27,19 @@ const extension: JupyterLabPlugin<void> = {
     widget.title.label = 'Seafile CM Interface';
     widget.title.closable = true;
 
+    // add image
+    let img = document.createElement('img');
+    widget.node.appendChild(img);
+
+    // fetch info
+    fetch('https:////egszlpbmle.execute-api.us-east-1.amazonaws.com/prod').then(response => {
+      return response.json();
+    }).then(data => {
+      img.src = data.img;
+      img.alt = data.title;
+      img.title = data.alt;
+    });
+
     // Add application command
     const command: string = 'xkcd:open';
     app.commands.addCommand(command, {
